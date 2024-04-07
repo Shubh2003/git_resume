@@ -1,6 +1,16 @@
+"use client"
+import { Button } from "@/components/button";
+import { Input } from "@/components/input";
 import Image from "next/image";
 
+import React, { useState } from "react";
+
 export default function Home() {
+  const [username,setUsername] = useState("")
+  const [loading,setLoading] = useState(false)
+
+  const handleUsernameChange = (e:{target:{value:React.SetStateAction<string>}}) => {setUsername(e.target.value);}
+  const handleSubmit = () => {}
   return (
     <main className="flex min-h-[83vh] flex-col items-center justify-center p-4 lg:px-24">
       <div className="relative flex flex-col w-full max-w-4xl gap-8 place-items-center">
@@ -25,9 +35,21 @@ export default function Home() {
         </p>
       </div>
       <div className="flex w-full md:max-w-sm items-center space-x-4 md:space-x-8">
-        <form className="flex w-full space-x-3">
-          //TODO: input field and button
-        </form>
+        <form className="flex w-full space-x-3" onSubmit={handleSubmit}> 
+          <Input 
+          type = "text"
+          placeholder="Enter your Github Username"
+          className="h-12 flex-grow"
+          value={username}
+          onChange={handleUsernameChange}
+          />
+          <Button 
+          type="submit"
+          disabled = {loading || username.trim() === ""}
+          className="h-12 px-6 flex items-center justify-center">
+            {loading ? <div className="loader1"></div>: "Generate"}
+          </Button>
+          </form>
       </div>
     </main>
   );
