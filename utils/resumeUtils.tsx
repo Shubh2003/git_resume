@@ -90,7 +90,7 @@ export const fetchOrganizations = async (
   }
 };
 
-export const fetchContribution = async (
+export const fetchContributions = async (
   username: string
 ): Promise<Contribution[]> => {
   try {
