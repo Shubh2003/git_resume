@@ -12,7 +12,7 @@ export default function Navbar() {
         className="text-lg font-black flex flex-row items-center justify-center gap-2 cursor-pointer"
       >
         <GitHubLogoIcon width="22" height="22" />
-        git-re
+        git-resume
       </Link>
       <div className="flex items-center gap-4">
         <a

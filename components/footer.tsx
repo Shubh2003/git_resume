@@ -33,7 +33,7 @@ export default function Footer() {
         <Link href="/#">
           <span className="text-lg font-black flex flex-row items-center justify-center gap-2">
             <GitHubLogoIcon width="22" height="22" />
-            git-re
+            git-resume
           </span>
         </Link>
 

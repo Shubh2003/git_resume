@@ -5,8 +5,10 @@ import "./globals.css";
 
 
 import React, { FormEvent, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
   const [username,setUsername] = useState("")
   const [isLoading,setLoading] = useState(false)
 
@@ -15,7 +17,9 @@ export default function Home() {
     e.preventDefault();
     setLoading(true);
   //navigate the user to create Resume
-    setTimeout(() => {setLoading(false)},2000);
+    setTimeout(() => {
+      router.push(`/resume/${username}`)
+      setLoading(false)},2000);
   }
   return (
     <main className="flex min-h-[83vh] flex-col items-center justify-center p-4 lg:px-24">
@@ -27,7 +31,7 @@ export default function Home() {
       <div className="flex flex-col items-center justify-center space-y-4 z-10 text-center">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-black">
           <span className="text-transparent bg-clip-text bg-gradient-to-br gradient-radial from-blue-500 to-blue-900">
-            git-re
+            git-resume
           </span>
         </h1>
         <p className="text-xl md:text-2xl lg:text-4xl font-semibold">

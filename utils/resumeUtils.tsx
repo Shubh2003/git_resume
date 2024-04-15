@@ -106,8 +106,7 @@ export const fetchContributions = async (
         count: number;
       }
     >();
-
-    response.data.items.foEach((item: any) => {
+    response.data.items.forEach((item: any) => {
       const repoName = item.repository_url.split("/").pop();
       const repoOwner =
         item.repository_url.split("/")[
@@ -139,10 +138,11 @@ export const fetchContributions = async (
         commitCount: count,
       })
     );
+
     contributions.sort((a, b) => b.commitCount - a.commitCount);
     return contributions;
   } catch (error) {
-    console.error("Error fetching User Contribution", error);
+    console.error("Error fetching contributions:", error);
     return [];
   }
 };
@@ -192,15 +192,22 @@ export const fetchLanguageData = async(
             `https://api.github.com/users/${username}/repos`
         );
         const repos = response.data;
-
+        // console.log(repos);
+        
         let languageData : {[key:string]:number} ={};
         for(const repo of repos){
             if(repo.language){
-                languageData[repo.langauge]= (languageData[repo.langauge] || 0) + 1;
+              //error due to language spelling mistake
+
+                languageData[repo.language]= (languageData[repo.language] || 0) + 1;
+                // console.log(repo.langauge);
+                
             }
         }
-
+        // console.log(sortLanguages(languageData,username));
         return sortLanguages(languageData,username);
+        
+        
     } catch (error) {
         console.error("Error fetching language data",error);
         return [];

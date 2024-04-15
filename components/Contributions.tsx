@@ -17,17 +17,18 @@ const Contributions:React.FC<ContributionsProps> = ({
             setContributions(
                 contributionData.slice(0,contributionCount).map((contribution)=>({
                     organizationName:contribution.organizationName,
+                    repoUrl:contribution.repoUrl,
                     repository:contribution.repository,
                     url:contribution.url,
-                    repoUrl:contribution.repoUrl,
                     commitCount:contribution.commitCount
                 }))
             );
-            fetchAndSetOrganization();
+            
         } catch (error) {
             console.error("Error fetching Contribution",error)
         }
        }
+       fetchAndSetOrganization();
     },[username,contributionCount])
     return (
         <div className="mt-5 text-[#F8FAFC]">
