@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
 
-## Getting Started
+# GitHub Resume Generator
 
-First, run the development server:
+<i>This project is a web application that generates a professional resume from a GitHub profile. By entering a GitHub username, this web application generates a professional resume based on the user's contributions and projects.</i>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+</div>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<div align="center">
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 💻 Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![Shadcn UI](https://img.shields.io/badge/Shadcn%20UI-%23FF69B4?style=for-the-badge&logo=github&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3954E1?style=for-the-badge&logo=supabase&logoColor=white)
+![GitHub Public API](https://img.shields.io/badge/GitHub%20Public%20API-181717?style=for-the-badge&logo=github&logoColor=white)
+![GitHub OAuth](https://img.shields.io/badge/GitHub%20OAuth-181717?style=for-the-badge&logo=github&logoColor=white)
+![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white)
 
-## Learn More
+</div>
 
-To learn more about Next.js, take a look at the following resources:
+## Key Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Fetches user data from GitHub's API
+- Generates a professional resume based on GitHub contributions and projects
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Setup and Installation
 
-## Deploy on Vercel
+Follow these steps to set up git-re on your local machine:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Fork the Repository & Clone it:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   - Fork the git-re repository to your GitHub account.
+   - Clone the forked repository to your local machine using the command:
+     ```
+     git clone https://github.com/Shubh2003/git_resume.git
+     ```
+
+2. **Create a New Branch:**
+
+   - Create a new branch to work on using the command:
+     ```
+     git checkout -b <branch_name>
+     ```
+
+3. **Install Dependencies:**
+
+   - Navigate to the project directory and install the dependencies using:
+     ```
+     npm install
+     ```
+     or
+     ```
+     yarn install
+     ```
+
+4. **Start the Development Server:**
+
+   - Start the development server by running:
+     ```
+     npm run dev
+     ```
+     or
+     ```
+     yarn dev
+     ```
+5. **You're Good to Go:**
+   - With the setup complete, you're ready to start exploring.
+  
